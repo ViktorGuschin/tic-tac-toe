@@ -20,7 +20,12 @@ class TicTacToe {
     }
   }
 
-  isFinished() {}
+  isFinished() {
+    return (
+      (this._counterTurn === 9 && this.getWinner() === null) ||
+      this.getWinner() !== null
+    );
+  }
 
   getWinner() {
     if (
@@ -67,7 +72,9 @@ class TicTacToe {
     return null;
   }
 
-  noMoreTurns() {}
+  noMoreTurns() {
+    return this._counterTurn === 9;
+  }
 
   isDraw() {
     return this._counterTurn === 9 && this.getWinner() === null;
@@ -79,117 +86,3 @@ class TicTacToe {
 }
 
 module.exports = TicTacToe;
-
-// let game;
-
-// game = new TicTacToe();
-// game.nextTurn(2, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 2);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 1);
-// console.log(game.isDraw());
-
-// game.nextTurn(0, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(2, 0);
-// console.log(game.isDraw());
-
-// game.nextTurn(1, 1);
-// console.log(game.isDraw());
